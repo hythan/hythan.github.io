@@ -1,0 +1,131 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+
+.modal {
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    @include size(100%);
+  }
+
+  &__image {
+    display: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: -21px;
+    right: 0;
+    @include fontConfig($white, 12px, 20px, $fontRegular, right);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      color: $orange;
+    }
+  }
+
+  &__wrapper {
+    @include size(auto);
+    background-color: $white;
+    padding: 0;
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    min-width: 298px;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 24px;
+  }
+
+  &__icon {
+    padding-top: 20px;
+    box-sizing: content-box;
+    padding-bottom: 18px;
+  }
+
+  &__wellcome {
+    @include fontConfig($black-03, 12px, 20px, $fontRegular, center);
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+
+  &__text {
+    @include fontConfig($black-04, 16px, 23px, $fontRegular, center);
+    margin-bottom: 26px;
+  }
+
+  &__input {
+    @include size(100%, 40px);
+    border: 1px solid $gray-01;
+    border-radius: 5px;
+    padding: 10px 6px;
+    @include fontConfig($black-04, 12px, 20px, $fontRegular, left);
+  }
+
+  &__button {
+    @include size(100%, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    @include fontConfig($white, 12px, 20px, $fontBold, center);
+    text-transform: uppercase;
+    gap: 8px;
+    background-color: $orange;
+    border: none;
+    border-radius: 10px;
+    margin-top: 12px;
+  }
+}
+
+@include mq(1025px) {
+
+  .modal {
+    &__close {
+      top: -27px;
+    }
+
+    &__wrapper {
+      bottom: 0;
+    }
+
+    &__image {
+      display: flex;
+      @include size(100%);
+      max-width: 426px;
+      object-fit: contain;
+    }
+
+    &__content {
+      padding: 0 51px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+
+    &__input {
+      border-radius: 10px;
+    }
+
+  }
+}

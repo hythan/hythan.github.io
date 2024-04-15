@@ -1,0 +1,74 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.deals__title {
+  @include fontConfig($black, 16px, 24px, $fontBold, center);
+  padding: 24px 31px 21px;
+}
+
+.slider__deals {
+  padding: 0 31px;
+  margin-bottom: 40px;
+  
+  .item {
+    &__wrapper {
+      background-color: $gray;
+      border-radius: 4px;
+      padding: 11px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        @include size(32px);
+        object-fit: contain;
+        margin-right: 21px;
+      }
+
+    }
+
+    &__title {
+      @include fontConfig($black, 14px, 21px, $fontBold, left);
+    }
+
+    &__text {
+      @include fontConfig($black-02, 12px, 18px, $fontRegular, left);
+    }
+  }
+}
+
+@include mq(768px) {
+  .slider__deals {
+    padding-left: 31px;
+    margin-bottom: 40px;
+    .swiper-slide  {
+      width: 50%;
+    }
+  }
+}
+
+@include mq(1025px) {
+  .container__deals {
+    @include grid();
+  }
+  .slider__deals {
+    padding: 0;
+    margin-bottom: 40px;
+
+    .swiper-slide {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+@include mq(1500px) {
+  .container__deals {
+    @include grid($max-width: 1432px);
+  } 
+}
+
+@include mq(1920px) {
+  .container__deals {
+    @include grid($max-width: 1632px);
+  } 
+}

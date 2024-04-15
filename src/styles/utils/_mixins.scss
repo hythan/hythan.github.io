@@ -1,0 +1,29 @@
+@import "./vars";
+
+@mixin grid($width: 100%, $padding: 0 16px, $max-width: 1282px, $margin: 0 auto){
+    width:  $width;
+    padding: $padding;
+    max-width: $max-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@mixin mq($value, $condition: min-width) {
+    @media ($condition: $value) {
+        @content;
+    }
+}
+
+@mixin fontConfig($color, $fontSize,$lineHeight, $fontWeight, $textAlign: left, $textDecoration:initial){
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    text-align: $textAlign;
+    text-decoration: $textDecoration;
+    font-family: $fontPrimary;
+}
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}

@@ -1,0 +1,241 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+ul {
+  list-style: none;
+}
+
+.newsletter {
+  background-color: $white-01;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+
+  &__wrapper {
+    @include grid($padding: 24px 31px, $max-width: 952px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include fontConfig($black, 24px, 36px, $fontBold, center);
+    padding-bottom: 8px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    border: 1px solid $black;
+    border-radius: 4px;
+    @include size(100%, 26px);
+    background-color: $white;
+    padding: 0 24px;
+    @include fontConfig($black, 14px, 21px, $fontRegular, left);
+    margin-right: 15px;
+  }
+
+  &__button {
+    @include size(79px, 26px);
+    background-color: $orange;
+    border: none;
+    @include fontConfig($white, 14px, 21px, $fontBold, center);
+    padding: 0 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}
+
+.footer__menu {
+  @include grid($padding: 24px 31px, $max-width: 952px);
+
+  .menu {
+
+    &__item {
+      padding-bottom: 17px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &.active {
+        svg {
+          transition: all 0.3s ease-in-out;
+          rotate: 45deg;
+        }
+      }
+    }
+
+    &__title {
+      width: 100%;
+      @include fontConfig($black, 16px, 18px, $fontBold, left);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__sublist {
+      margin-top: 16px;
+      height: 0;
+      display: none;
+      transition: all 0.3s ease-in-out;
+
+      &.active {
+        height: auto;
+        display: block;
+      }
+
+      .sublist__item {
+        margin-bottom: 16px;
+      }
+
+      .sublist__link {
+        @include fontConfig($black-01, 12px, 18px, $fontRegular, left);
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.footer__bottom {
+  background-color: $black;
+
+  .bottom__wrapper {
+    @include grid($padding: 24px 31px);
+  }
+
+  .social,
+  .flags {
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+  }
+
+  .info{
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    &__powered, &__develop {
+      @include fontConfig($white, 10px, 14px, $fontRegular, left);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      img {
+        margin-top: 4px;
+        height: 36px;
+        object-fit: contain;
+      }
+    }
+  }
+
+}
+
+
+@include mq(768px) {
+  .newsletter {
+    &__wrapper {
+      padding: 40px 16px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__title {
+      text-align: left;
+      padding: 0;
+      width: 32%;
+    }
+
+    &__form {
+      position: relative;
+      @include size(66%, 40px);
+    }
+
+    &__input {
+      @include size(100%, 40px);
+      margin: 0;
+    }
+
+    &__button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 40px;
+    }
+  }
+
+
+  .footer__bottom {
+   .bottom__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px ;
+
+    .social__list, .flags__list, .info_wrapper {
+      margin: 0;
+    }
+   } 
+  }
+
+}
+
+@include mq(1025px) {
+  .footer__menu {
+    padding: 43px 16px;
+    svg {
+      display: none;
+    }
+
+    .menu {
+      &__list {
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      &__item {
+        padding-bottom: 24px;
+        flex-direction: column;
+
+        &:last-child {
+          padding-bottom: 24px;
+        }
+      }
+
+      &__title {
+        cursor: unset;
+      }
+
+      &__sublist {
+        height: auto;
+        display: block;
+
+        .sublist__item {
+          margin-bottom: 24px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+
+  }
+}

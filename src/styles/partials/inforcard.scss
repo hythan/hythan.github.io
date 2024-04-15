@@ -1,0 +1,59 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.container__inforcard {
+  padding: 0 31px;
+  margin-top: 23px;
+  margin-bottom: 40px;
+
+  .infocard {
+    &__image {
+      @include size(100%);
+      object-fit: contain;
+    }
+
+    &__title {
+      @include fontConfig($black-01, 24px, 36px, $fontBold, left);
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      @include fontConfig($black-01, 14px, 21px, $fontRegular, left);
+      padding-right: 29px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@include mq(1025px) {
+  .container__inforcard {
+    @include grid();
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+
+    .infocard {
+      &__wrapper {
+        max-width: 420px;
+        padding-right: 64px;
+      }
+
+      &__text {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@include mq(1500px) {
+  .container__inforcard {
+    max-width: 1432px;
+  }
+}
+
+@include mq(1920px) {
+  .container__inforcard {
+    max-width: 1632px;
+  }
+}
