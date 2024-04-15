@@ -46,75 +46,80 @@
 }
 
 @include mq(1025px) {
-.header-main{
-	box-shadow: 0px 4px 6px 0px #00000014;
 
-	&__wrapper {
-		@include grid($padding: 24px 16px);
-		box-sizing: content-box;
-		justify-content: space-between;
-		box-shadow: none;minicart__button
+	.header-notice__text {
+		font-size: 12px;
+	}
 
-		.logo__link {
-			margin: 0;
-		}
-	
-		.search {
-			&__bar {
-				@include size(49%, 40px);
-				position: relative;
-			}
-	
-			&__input {
-				@include size(100%);
-				border-radius: 10px;
-				background: $gray;
-				border: none;
-				padding: 0 24px;
-				@include fontConfig($black, 12px,18px, $fontRegular);		
-			}
-	
-			&__button {
-				position: absolute;
-				right: 0;
-				top:0;
-				z-index: 1;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				background-color:$orange;
-				border-radius: 8px;
+	.header-main {
+		box-shadow: 0px 4px 6px 0px #00000014;
+
+		&__wrapper {
+			@include grid($padding: 24px 16px);
+			box-sizing: content-box;
+			justify-content: space-between;
+			box-shadow: none;
+
+			minicart__button .logo__link {
 				margin: 0;
-				@include size(119px, 40px);
-				@include fontConfig($white, 14px,21px, $fontRegular, center);		
-	
 			}
-		}
-	
-		.header-main__buttons {
-			display: flex;
-			gap: 39px;
-	
-			button {
-				background: transparent;
-				border: none;
-				display: flex;
-				align-items: center;
-				gap: 8px;
-				@include size(auto);
-				@include fontConfig($black, 14px, 21px, $fontRegular, left);
-				padding: 15px 17px;
-				border: 1px solid transparent;
 
-				&:hover {
-					border: 1px solid $orange;
+			.search {
+				&__bar {
+					@include size(49%, 40px);
+					position: relative;
+				}
+
+				&__input {
+					@include size(100%);
+					border-radius: 10px;
+					background: $gray;
+					border: none;
+					padding: 0 24px;
+					@include fontConfig($black, 12px, 18px, $fontRegular);
+				}
+
+				&__button {
+					position: absolute;
+					right: 0;
+					top: 0;
+					z-index: 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background-color: $orange;
 					border-radius: 8px;
+					margin: 0;
+					@include size(119px, 40px);
+					@include fontConfig($white, 14px, 21px, $fontRegular, center);
+
 				}
 			}
-	
+
+			.header-main__buttons {
+				display: flex;
+				gap: 39px;
+
+				button {
+					background: transparent;
+					border: none;
+					display: flex;
+					align-items: center;
+					gap: 8px;
+					@include size(auto);
+					@include fontConfig($black, 14px, 21px, $fontRegular, left);
+					padding: 15px 17px;
+					border: 1px solid transparent;
+
+					&:hover {
+						border: 1px solid $orange;
+						border-radius: 8px;
+					}
+				}
+
+			}
 		}
 	}
-}
 
 	.header-menu__wrapper {
 		@include grid($padding: 13px 16px);
@@ -156,14 +161,16 @@
 
 @include mq(1500px) {
 
-	.header-main__wrapper, .header-menu__wrapper {
+	.header-main__wrapper,
+	.header-menu__wrapper {
 		max-width: 1400px;
 	}
 }
 
 @include mq(1920px) {
 
-	.header-main__wrapper, .header-menu__wrapper {
+	.header-main__wrapper,
+	.header-menu__wrapper {
 		max-width: 1600px;
 	}
 }

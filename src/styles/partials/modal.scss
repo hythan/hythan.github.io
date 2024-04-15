@@ -104,10 +104,6 @@
       top: -27px;
     }
 
-    &__wrapper {
-      bottom: 0;
-    }
-
     &__image {
       display: flex;
       @include size(100%);
@@ -127,5 +123,13 @@
       border-radius: 10px;
     }
 
+  }
+}
+
+@include mq(1500px) {
+  .modal {
+    &__wrapper {
+      bottom: 0;
+    }
   }
 }

@@ -98,7 +98,7 @@ export const Shelf = () => {
             slidesPerView: 2,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 5,
           }
         }}
         observer={true}
