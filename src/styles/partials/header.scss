@@ -60,7 +60,7 @@
 			justify-content: space-between;
 			box-shadow: none;
 
-			minicart__button .logo__link {
+			.logo__link {
 				margin: 0;
 			}
 
@@ -132,6 +132,7 @@
 			align-items: center;
 			justify-content: center;
 			list-style: none;
+			gap: 15px;
 		}
 
 		&__item {
@@ -164,6 +165,10 @@
 	.header-main__wrapper,
 	.header-menu__wrapper {
 		max-width: 1400px;
+	}
+
+	.header-main__wrapper .header-main__buttons {
+		margin-left: 45px;
 	}
 }
 
