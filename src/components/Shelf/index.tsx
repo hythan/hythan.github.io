@@ -85,7 +85,7 @@ export const Shelf = () => {
 
   return <>
       <div className="container__products">
-      <h2 className="shelf__title">Marcas Pareceiras</h2>
+      <h2 className="shelf__title">As Mais Pedidas</h2>
       <Swiper
         className="slider__products"
         spaceBetween={14}
