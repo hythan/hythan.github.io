@@ -1,4 +1,3 @@
-import React from "react";
 import { FooterMenuMobile } from "./mobile";
 import { Newsletter } from "./newsletter";
 import '../../styles/partials/footer.scss'

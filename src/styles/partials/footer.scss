@@ -100,6 +100,11 @@ ul {
       .sublist__link {
         @include fontConfig($black-01, 12px, 18px, $fontRegular, left);
         margin-bottom: 16px;
+
+        &:hover {
+          opacity: 1;
+          color: $orange;
+        }
       }
     }
   }

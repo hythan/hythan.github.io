@@ -1,4 +1,3 @@
-import React from "react"
 import '../../styles/partials/header.scss'
 interface IProps {
 	departaments: Department[]

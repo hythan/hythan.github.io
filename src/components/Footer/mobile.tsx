@@ -3,7 +3,7 @@ import { useState } from "react"
 interface IProps {
   links: FooterLinks[]
 }
-export const FooterMenuMobile = ({ links }: any) => {
+export const FooterMenuMobile = ({ links }: IProps) => {
   const [isActiveIndex, setIsActiveIndex] = useState(-1);
   const handleClick = (index: number) => {
     if(isActiveIndex === index) {

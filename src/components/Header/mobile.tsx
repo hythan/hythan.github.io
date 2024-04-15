@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import '../../styles/partials/header.scss'
 export const HeaderMobile = () => {
   const [isOnTop, setIsOnTop] = useState(true);

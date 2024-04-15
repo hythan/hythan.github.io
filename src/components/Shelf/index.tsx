@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from "swiper/react";

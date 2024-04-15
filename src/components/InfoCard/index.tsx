@@ -1,4 +1,3 @@
-import React from "react";
 import '../../styles/partials/inforcard.scss'
 
 export const InfoCard = () => {
