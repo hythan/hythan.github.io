@@ -98,6 +98,9 @@ export const Shelf = () => {
             slidesPerView: 2,
           },
           1024: {
+            slidesPerView: 4,
+          },
+          1500: {
             slidesPerView: 5,
           }
         }}
@@ -127,7 +130,6 @@ export const Shelf = () => {
             </div>
           </SwiperSlide>
           )
-
         })}
      
       </Swiper>

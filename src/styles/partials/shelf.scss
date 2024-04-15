@@ -68,7 +68,8 @@
     &__description {
       opacity: 0.5;
       @include fontConfig($black, 12px, 18px, $fontRegular, left);
-      padding: 8px 0;
+      margin: 8px 0;
+      padding: 0;
       text-overflow: ellipsis;
       overflow: hidden;
       display: -webkit-box;
